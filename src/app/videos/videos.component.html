@@ -1,0 +1,87 @@
+<html >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>   
+<section class="wrapper style1">
+    <div class="container">
+        <div class="row gtr-200">
+            <div class="col-4 col-12-narrower">
+                <div id="sidebar">
+
+                    <!-- Sidebar -->
+
+                        <section>
+                            <h3>Parametros de busqueda</h3>
+                            <p>Ingrese las palabras clave o tematicas del video que desea buscar aqui:</p>
+                            <input type="text" name="nombredelacaja">
+                            <h3>_____________________________</h3>
+                            <p>Ingrese el nombre del autor del video que desea buscar aqui:</p>
+                            <input type="text" name="nombredelacaja">
+                            <h3>_____________________________</h3>
+                            <p>Seleccione el año del video:</p>
+                                <select name="OS">
+                                    <option value="0">----------------------</option>    
+                                    <option value="1">2011</option> 
+                                    <option value="2">2012</option> 
+                                    <option value="3">2013</option>
+                                    <option value="10">2014</option> 
+                                    <option value="11">2015</option>
+                                    <option value="11">2016</option>
+                                    <option value="11">2017</option>
+                                    <option value="11">2018</option>
+                                    <option value="11">2019</option>
+                                    </select>
+                                <h3></h3>
+
+                                
+                            <footer>
+                                    <button  (click)="Buscar()">Buscar</button>
+                            </footer>
+                        </section>
+
+                </div>
+            </div>
+            <div class="col-8  col-12-narrower imp-narrower">
+                <div id="content">
+
+                    <!-- Content -->
+
+                        <article>
+                            <header>
+                                <h2>Busqueda de Videos.</h2>
+                                
+                                <p>Porfavor realizar una busqueda</p>
+
+                            </header>
+                        </article>
+
+                        <table border=1 class='tabla_datos'>
+                            <thead>
+                                <tr id='titulo'>
+                                    <td>ID</td>
+                                    <td>tema</td>
+                                    <td>autor</td>
+                                    <td>fecha</td>
+                                    <td>link</td>
+                                </tr>          
+                            </thead>
+                            <tbody>
+                               <tr *ngFor="let post of posts">
+                                  <td>{{post.id}}</td>
+                                  <td>{{post.tema}}</td>
+                                  <td>{{post.autor}}</td>
+                                  <td>{{post.fecha}}</td>
+                                  <td>{{post.link}}</td>
+                               </tr>
+                            </tbody>
+                         </table> 
+
+                           
+                        
+                            
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</html>
+
